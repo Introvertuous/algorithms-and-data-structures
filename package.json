@@ -1,0 +1,19 @@
+{
+    "name": "algorithms_and_data_structures",
+    "version": "0.0.1",
+    "description": "Algorithms and data structures in various programming languages.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "jest-cli": "^15.1.1"
+    },
+    "dependencies": {},
+    "jest": {
+        "testEnvironment": "node"
+    }
+}
