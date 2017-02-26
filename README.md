@@ -2,10 +2,6 @@
 
 This project is an attempt to implement a collection of algorithms and data structures in various programming languages, purely for educational purposes. I will write pure Javascript implementations as well as equivelant implementations in lower level languages for performance comparison.
 
-## Compiling
-- Node: [Native Modules](https://nodejs.org/api/addons.html)
-- Browser: [Web Assembly](http://webassembly.org/)
-
 ## Data Structures
 
 ### Abstract
@@ -75,3 +71,7 @@ This project is an attempt to implement a collection of algorithms and data stru
 - Leet Code
   - ~~[Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)~~
   - ~~[Reverse Integer](https://leetcode.com/problems/reverse-integer/)~~
+
+## Compiling
+- Node: [Native Modules](https://nodejs.org/api/addons.html)
+- Browser: [Web Assembly](http://webassembly.org/)
