@@ -1,4 +1,4 @@
-# Algorithms and Data Structures ![](https://travis-ci.org/Introvertuous/algorithms_and_data_structures.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/Introvertuous/algorithms_and_data_structures/badge.svg?branch=master)](https://coveralls.io/github/Introvertuous/algorithms_and_data_structures?branch=master)
+# Algorithms and Data Structures ![](https://travis-ci.org/Introvertuous/algorithms_and_data_structures.svg?branch=master)
 
 This project is an attempt to implement a collection of algorithms and data structures in various programming languages, purely for educational purposes. I will write pure Javascript implementations as well as equivelant implementations in lower level languages for performance comparison.
 
