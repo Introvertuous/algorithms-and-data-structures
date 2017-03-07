@@ -1,6 +1,6 @@
 # Algorithms and Data Structures ![](https://travis-ci.org/Introvertuous/algorithms_and_data_structures.svg?branch=master)
 
-This project is an attempt to implement a collection of algorithms and data structures in various programming languages, purely for educational purposes. I will write pure JavaScript implementations as well as equivalent implementations in lower level languages for performance comparison, which will be compiled to [node native modules](https://nodejs.org/api/addons.html) and [web assembly](http://webassembly.org/).
+This project is an attempt to implement a collection of algorithms and data structures in various programming languages, purely for educational purposes.
 
 ## Data Structures
 
