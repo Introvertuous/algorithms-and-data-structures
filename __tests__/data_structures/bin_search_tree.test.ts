@@ -1,8 +1,8 @@
 'use strict';
 
-const { BinSearchTree } = require('.');
+import { BinSearchTree } from '../../data_structures';
 
-let tree = BinSearchTree.create();
+const tree = new BinSearchTree();
 tree.add(4);
 tree.add(2);
 tree.add(76);
