@@ -7,12 +7,15 @@
         "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
     },
     "scripts": {
-        "test": "jest"
+        "build": "rm -rf ./dist/ && rm -rf ./tsDist/ && tsc",
+        "test": "jest src"
     },
     "devDependencies": {
         "jest-cli": "^15.1.1"
     },
-    "dependencies": {},
+    "dependencies": {
+        "typescript": "^2.2.2"
+    },
     "jest": {
         "testEnvironment": "node"
     }

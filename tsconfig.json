@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "tsDist",
+    "module": "es6",
+    "target": "es6"
+  },
+  "exclude": [
+    "node_modules",
+    "tsDist",
+    "dist"
+  ]
+}
