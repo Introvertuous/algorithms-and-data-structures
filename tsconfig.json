@@ -3,7 +3,7 @@
         "allowJs": true,
         "outDir": "dist",
         "module": "commonjs",
-        "target": "es6",
+        "target": "esnext",
         "noImplicitAny": false,
         "sourceMap": false
     },
