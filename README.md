@@ -66,8 +66,3 @@ This project is an attempt to implement a collection of algorithms and data stru
   - [Wiki](https://en.wikipedia.org/wiki/Timsort)
 - Merge Sort
   - [Wiki](https://en.wikipedia.org/wiki/Merge_sort)
-
-## Challenges
-- Leet Code
-  - ~~[Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)~~
-  - ~~[Reverse Integer](https://leetcode.com/problems/reverse-integer/)~~
