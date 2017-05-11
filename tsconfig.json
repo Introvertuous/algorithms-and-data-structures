@@ -4,6 +4,7 @@
         "outDir": "dist",
         "module": "commonjs",
         "target": "esnext",
+        "removeComments": true,
         "noImplicitAny": false,
         "sourceMap": false
     },

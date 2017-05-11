@@ -7,17 +7,16 @@
         "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
     },
     "scripts": {
-        "build": "rm -rf ./dist/ && tsc",
+        "build": "tsc",
         "test": "yarn build && jest dist"
     },
     "devDependencies": {
-        "@types/jest": "^19.2.2",
-        "jest-cli": "^19.0.2"
-    },
-    "dependencies": {
+        "@types/jest": "^19.2.3",
+        "jest-cli": "^20.0.0",
         "typescript": "^2.2.2"
     },
     "jest": {
-        "testEnvironment": "node"
+        "testEnvironment": "node",
+        "mapCoverage": true
     }
 }
