@@ -8,8 +8,9 @@ export default class Queue<T> {
   }
   
   public dequeue(): T {
-    if(this.lis.length === 0)
+    if (this.lis.length === 0) {
       return null;
+    }
     return this.lis.shift();
     
   }

@@ -13,6 +13,7 @@
         "@types/jest": "^19.2.3",
         "@types/node": "^7.0.21",
         "jest-cli": "^20.0.0",
+        "tslint": "^5.2.0",
         "typescript": "^2.2.2"
     },
     "jest": {

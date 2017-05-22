@@ -21,32 +21,16 @@ export default class BinSearchTree<T> {
 
   public contains(data: T): Boolean {
     let curr: BinSearchTreeNode<T> = this.root;
-    while(curr !== null) {
-      if(data < curr.data) {
+    while (curr !== null) {
+      if (data < curr.data) {
         curr = curr.left;
-      } else if(data > curr.data) {
+      } else if (data > curr.data) {
         curr = curr.right;
       } else {
         return true;
       }
     }
     return false;
-  }
-
-  private traverse(callback: Function) {
-    (function inOrder(node: BinSearchTreeNode<T>) {
-      if(node !== null) {
-        if(node.left !== null) {
-          inOrder(node.left)
-        }
-
-        callback.call(this, node);
-
-        if(node.right !== null) {
-          inOrder(node.right);
-        }
-      }
-    })(this.root);
   }
 
   public toArray(): Array<number> {
@@ -71,20 +55,20 @@ export default class BinSearchTree<T> {
 
   public add(data: T) {
     const node: BinSearchTreeNode<T> = new BinSearchTreeNode(data);
-    if(this.root === null) {
+    if (this.root === null) {
       this.root = node;
     } else {
       let curr = this.root;
-      while(true) {
-        if(data < curr.data) {
-          if(curr.left === null) {
+      while (true) {
+        if (data < curr.data) {
+          if (curr.left === null) {
             curr.left = node;
             break;
           } else {
             curr = curr.left;
           }
-        } else if(data > curr.data) {
-          if(curr.right === null) {
+        } else if (data > curr.data) {
+          if (curr.right === null) {
             curr.right = node;
             break;
           } else { 
@@ -99,7 +83,7 @@ export default class BinSearchTree<T> {
 
   public height(): number {
     return (function getHeight(curr: BinSearchTreeNode<T>): number {
-      if(curr === null) {
+      if (curr === null) {
         return -1;
       }
       
@@ -109,4 +93,20 @@ export default class BinSearchTree<T> {
       return Math.max(left, right) + 1;
     })(this.root);
   }
-};
+
+  private traverse(callback: Function) {
+    (function inOrder(node: BinSearchTreeNode<T>) {
+      if (node !== null) {
+        if (node.left !== null) {
+          inOrder(node.left);
+        }
+
+        callback.call(this, node);
+
+        if (node.right !== null) {
+          inOrder(node.right);
+        }
+      }
+    })(this.root);
+  }
+}
