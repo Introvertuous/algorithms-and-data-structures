@@ -7,8 +7,7 @@
         "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
     },
     "scripts": {
-        "build": "tsc",
-        "test": "yarn build && jest dist"
+        "test": "tsc && jest dist"
     },
     "devDependencies": {
         "@types/jest": "^19.2.3",
