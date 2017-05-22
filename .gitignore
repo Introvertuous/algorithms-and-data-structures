@@ -15,5 +15,5 @@ build
 .env
 npm-debug.log
 .vscode
-tsDist
+
 dist
