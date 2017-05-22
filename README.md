@@ -1,4 +1,4 @@
-# Algorithms and Data Structures ![](https://travis-ci.org/Introvertuous/algorithms_and_data_structures.svg?branch=master)
+# Algorithms and Data Structures
 
 This project is an attempt to implement a collection of algorithms and data structures in typescript, purely for educational purposes.
 
