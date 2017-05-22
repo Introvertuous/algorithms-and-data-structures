@@ -1,112 +1,112 @@
-'use strict';
+'use strict'
 
 export class BinSearchTreeNode<T> {
-  public data: T;
-  public left: BinSearchTreeNode<T>;
-  public right: BinSearchTreeNode<T>;
+  public data: T
+  public left: BinSearchTreeNode<T>
+  public right: BinSearchTreeNode<T>
 
-  public constructor(data: T, left: BinSearchTreeNode<T> = null, right: BinSearchTreeNode<T> = null) {
-    this.data = data;
-    this.left = left; 
-    this.right = right; 
+  public constructor (data: T, left: BinSearchTreeNode<T> = null, right: BinSearchTreeNode<T> = null) {
+    this.data = data
+    this.left = left
+    this.right = right
   }
 }
 
 export default class BinSearchTree<T> {
-  private root: BinSearchTreeNode<T>;
+  private root: BinSearchTreeNode<T>
 
-  public constructor(root: BinSearchTreeNode<T> = null) {
-    this.root = root;
+  public constructor (root: BinSearchTreeNode<T> = null) {
+    this.root = root
   }
 
-  public contains(data: T): Boolean {
-    let curr: BinSearchTreeNode<T> = this.root;
+  public contains (data: T): Boolean {
+    let curr: BinSearchTreeNode<T> = this.root
     while (curr !== null) {
       if (data < curr.data) {
-        curr = curr.left;
+        curr = curr.left
       } else if (data > curr.data) {
-        curr = curr.right;
+        curr = curr.right
       } else {
-        return true;
+        return true
       }
     }
-    return false;
+    return false
   }
 
-  public toArray(): Array<number> {
-    const result: Array<number> = [];
+  public toArray (): Array<number> {
+    const result: Array<number> = []
 
     this.traverse((node) => {
-      result.push(node.data);
-    });
+      result.push(node.data)
+    })
 
-    return result;
+    return result
   }
 
-  public size(): number {
-    let length: number = 0;
+  public size (): number {
+    let length: number = 0
 
     this.traverse(() => {
-      length++;
-    });
+      length++
+    })
 
-    return length;
+    return length
   }
 
-  public add(data: T) {
-    const node: BinSearchTreeNode<T> = new BinSearchTreeNode(data);
+  public add (data: T) {
+    const node: BinSearchTreeNode<T> = new BinSearchTreeNode(data)
     if (this.root === null) {
-      this.root = node;
+      this.root = node
     } else {
-      let curr = this.root;
+      let curr = this.root
       while (true) {
         if (data < curr.data) {
           if (curr.left === null) {
-            curr.left = node;
-            break;
+            curr.left = node
+            break
           } else {
-            curr = curr.left;
+            curr = curr.left
           }
         } else if (data > curr.data) {
           if (curr.right === null) {
-            curr.right = node;
-            break;
-          } else { 
-            curr = curr.right;
+            curr.right = node
+            break
+          } else {
+            curr = curr.right
           }
         } else {
-          break;
+          break
         }
       }
     }
   }
 
-  public height(): number {
-    return (function getHeight(curr: BinSearchTreeNode<T>): number {
+  public height (): number {
+    return (function getHeight (curr: BinSearchTreeNode<T>): number {
       if (curr === null) {
-        return -1;
+        return -1
       }
-      
-      const right: number = getHeight(curr.right);
-      const left: number = getHeight(curr.left);
 
-      return Math.max(left, right) + 1;
-    })(this.root);
+      const right: number = getHeight(curr.right)
+      const left: number = getHeight(curr.left)
+
+      return Math.max(left, right) + 1
+    })(this.root)
   }
 
-  private traverse(callback: Function) {
-    (function inOrder(node: BinSearchTreeNode<T>) {
+  private traverse (callback: Function) {
+    (function inOrder (node: BinSearchTreeNode<T>) {
       if (node !== null) {
         if (node.left !== null) {
-          inOrder(node.left);
+          inOrder(node.left)
         }
 
-        callback.call(this, node);
+        callback.call(this, node)
 
         if (node.right !== null) {
-          inOrder(node.right);
+          inOrder(node.right)
         }
       }
-    })(this.root);
+    })(this.root)
   }
 }
