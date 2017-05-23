@@ -1,6 +1,6 @@
 'use strict'
 
-import { SinglyLinkedList } from '../../data_structures'
+import { SinglyLinkedList } from '../../src/data_structures'
 
 test('stack', () => {
   const stack = new SinglyLinkedList<string>()

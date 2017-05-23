@@ -1,6 +1,6 @@
 'use strict'
 
-import { Stack } from '../../data_structures'
+import { Stack } from '../../src/data_structures'
 
 test('stack', () => {
   const stack = new Stack()

@@ -1,6 +1,6 @@
 'use strict'
 
-import { BinSearchTree } from '../../data_structures'
+import { BinSearchTree } from '../../src/data_structures'
 
 const tree = new BinSearchTree()
 tree.add(4)

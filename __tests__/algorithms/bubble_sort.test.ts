@@ -1,6 +1,6 @@
 'use strict'
 
-import { bubbleSort } from '../../algorithms'
+import { bubbleSort } from '../../src/algorithms'
 
 test('sort', () => {
   const data: Array<number> = [5, 4, 7, 4, 3, 2, 6, 7]

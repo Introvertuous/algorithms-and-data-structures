@@ -1,6 +1,6 @@
 'use strict'
 
-import { Queue } from '../../data_structures'
+import { Queue } from '../../src/data_structures'
 
 test('queue', () => {
   const queue = new Queue()
