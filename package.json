@@ -10,12 +10,12 @@
         "test": "tslint *.ts && tsc && jest dist"
     },
     "devDependencies": {
-        "@types/jest": "^19.2.3",
-        "@types/node": "^7.0.21",
-        "jest-cli": "^20.0.0",
+        "@types/jest": "19.2.3",
+        "@types/node": "7.0.21",
+        "jest-cli": "20.0.0",
         "tslint": "5.2.0",
-        "tslint-config-standard": "^5.0.2",
-        "typescript": "^2.2.2"
+        "tslint-config-standard": "5.0.2",
+        "typescript": "2.2.2"
     },
     "jest": {
         "verbose": true
