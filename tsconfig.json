@@ -3,7 +3,7 @@
         "allowJs": false,
         "outDir": "dist",
         "module": "commonjs",
-        "target": "esnext",
+        "target": "es6",
         "removeComments": true,
         "noImplicitAny": false,
         "sourceMap": false
