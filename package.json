@@ -8,7 +8,7 @@
     },
     "scripts": {
         "build": "tsc",
-        "test": "yarn build && jest dist"
+        "test": "jest dist"
     },
     "devDependencies": {
         "@types/jest": "^19.2.3",
