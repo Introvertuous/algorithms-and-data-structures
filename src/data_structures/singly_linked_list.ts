@@ -20,7 +20,7 @@ export default class SinglyLinkedList<T> {
   }
 
   public pushFirst (data: T) {
-    const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data, this.head);
+    const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data, this.head)
     this.head = node
     if (this.tail === null) {
       this.tail = node
@@ -42,7 +42,7 @@ export default class SinglyLinkedList<T> {
   }
 
   public pushLast (data: T) {
-    const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data);
+    const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data)
     if (this.head === null) {
       this.head = node
     } else {

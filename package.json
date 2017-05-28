@@ -8,6 +8,7 @@
     },
     "scripts": {
         "build": "tsc",
+        "lint": "tslint src/**/*.ts{,x}",
         "test": "jest dist"
     },
     "devDependencies": {
