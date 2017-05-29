@@ -8,7 +8,7 @@
     },
     "scripts": {
         "build": "tsc",
-        "lint": "tslint src/**/*.ts{,x}",
+        "lint": "tslint src/**/*.ts __tests__/**/*.ts{,x}",
         "test": "jest dist"
     },
     "devDependencies": {
@@ -16,7 +16,7 @@
         "@types/node": "^7.0.21",
         "jest-cli": "^20.0.0",
         "tslint": "5.2.0",
-        "tslint-config-standard": "^5.0.2",
+        "tslint-config-airbnb": "^5.0.1",
         "typescript": "^2.3.2"
     },
     "jest": {
