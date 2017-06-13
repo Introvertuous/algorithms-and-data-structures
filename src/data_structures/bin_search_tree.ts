@@ -1,14 +1,14 @@
-'use strict';
+("use strict");
 
 export class BinSearchTreeNode<T> {
   public data: T;
   public left: BinSearchTreeNode<T>;
   public right: BinSearchTreeNode<T>;
 
-  public constructor (
+  public constructor(
     data: T,
     left: BinSearchTreeNode<T> = null,
-    right: BinSearchTreeNode<T> = null,
+    right: BinSearchTreeNode<T> = null
   ) {
     this.data = data;
     this.left = left;
@@ -19,11 +19,11 @@ export class BinSearchTreeNode<T> {
 export default class BinSearchTree<T> {
   private root: BinSearchTreeNode<T>;
 
-  public constructor (root: BinSearchTreeNode<T> = null) {
+  public constructor(root: BinSearchTreeNode<T> = null) {
     this.root = root;
   }
 
-  public contains (data: T): Boolean {
+  public contains(data: T): Boolean {
     let curr: BinSearchTreeNode<T> = this.root;
     while (curr !== null) {
       if (data < curr.data) {
@@ -37,17 +37,17 @@ export default class BinSearchTree<T> {
     return false;
   }
 
-  public toArray (): number[] {
+  public toArray(): number[] {
     const result: number[] = [];
 
-    this.traverse((node) => {
+    this.traverse(node => {
       result.push(node.data);
     });
 
     return result;
   }
 
-  public size (): number {
+  public size(): number {
     let length: number = 0;
 
     this.traverse(() => {
@@ -57,7 +57,7 @@ export default class BinSearchTree<T> {
     return length;
   }
 
-  public add (data: T) {
+  public add(data: T) {
     const node: BinSearchTreeNode<T> = new BinSearchTreeNode(data);
     if (this.root === null) {
       this.root = node;
@@ -85,7 +85,7 @@ export default class BinSearchTree<T> {
     }
   }
 
-  public height (): number {
+  public height(): number {
     return (function getHeight(curr: BinSearchTreeNode<T>): number {
       if (curr === null) {
         return -1;
@@ -98,7 +98,7 @@ export default class BinSearchTree<T> {
     })(this.root);
   }
 
-  private traverse (callback: Function) {
+  private traverse(callback: Function) {
     (function inOrder(node: BinSearchTreeNode<T>) {
       if (node !== null) {
         if (node.left !== null) {

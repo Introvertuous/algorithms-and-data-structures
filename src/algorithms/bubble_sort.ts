@@ -1,4 +1,4 @@
-'use strict';
+("use strict");
 
 export default function sort(arr: number[]) {
   let n: number = arr.length;

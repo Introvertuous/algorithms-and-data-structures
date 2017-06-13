@@ -1,10 +1,10 @@
-'use strict';
+("use strict");
 
 export class SinglyLinkedNode<T> {
   public data: T;
   public next: SinglyLinkedNode<T>;
 
-  public constructor (data: T, next: SinglyLinkedNode<T> = null) {
+  public constructor(data: T, next: SinglyLinkedNode<T> = null) {
     this.data = data;
     this.next = next;
   }
@@ -14,12 +14,15 @@ export default class SinglyLinkedList<T> {
   private head: SinglyLinkedNode<T>;
   private tail: SinglyLinkedNode<T>;
 
-  public constructor (head: SinglyLinkedNode<T> = null, tail: SinglyLinkedNode<T> = null) {
+  public constructor(
+    head: SinglyLinkedNode<T> = null,
+    tail: SinglyLinkedNode<T> = null
+  ) {
     this.head = head;
     this.tail = tail;
   }
 
-  public pushFirst (data: T) {
+  public pushFirst(data: T) {
     const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data, this.head);
     this.head = node;
     if (this.tail === null) {
@@ -27,7 +30,7 @@ export default class SinglyLinkedList<T> {
     }
   }
 
-  public popFirst (): T {
+  public popFirst(): T {
     if (this.head === null) {
       return null;
     }
@@ -41,7 +44,7 @@ export default class SinglyLinkedList<T> {
     return data;
   }
 
-  public pushLast (data: T) {
+  public pushLast(data: T) {
     const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data);
     if (this.head === null) {
       this.head = node;
@@ -51,7 +54,7 @@ export default class SinglyLinkedList<T> {
     this.tail = node;
   }
 
-  public reverse () {
+  public reverse() {
     if (this.head === null) {
       return;
     }
@@ -70,7 +73,7 @@ export default class SinglyLinkedList<T> {
     }
   }
 
-  public get (i: number): T {
+  public get(i: number): T {
     let curr: SinglyLinkedNode<T> = this.head;
     while (curr != null && i > 0) {
       curr = curr.next;
@@ -78,17 +81,17 @@ export default class SinglyLinkedList<T> {
       i = i - 1;
     }
     if (i !== 0) {
-      throw new Error('Index outside of list range');
+      throw new Error("Index outside of list range");
     }
     return curr.data;
   }
 
-  public middle (): T {
+  public middle(): T {
     let curr: SinglyLinkedNode<T> = this.head;
     let halfCurr: SinglyLinkedNode<T> = this.head;
     let count: number = 1;
     while (curr !== null) {
-      if ((count % 2) === 0) {
+      if (count % 2 === 0) {
         halfCurr = halfCurr.next;
       }
       curr = curr.next;
