@@ -8,12 +8,21 @@
     },
     "scripts": {
         "build": "tsc",
-        "test": "jest dist"
+        "test": "jest dist",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "prettier --write",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@types/jest": "^19.2.3",
         "@types/node": "^7.0.21",
+        "husky": "^0.13.4",
         "jest-cli": "^20.0.0",
+        "lint-staged": "^3.6.1",
         "typescript": "^2.3.2"
     },
     "jest": {
