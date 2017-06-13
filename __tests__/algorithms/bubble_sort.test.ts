@@ -1,5 +1,3 @@
-("use strict");
-
 import { bubbleSort } from "../../src/algorithms";
 
 test("sort", () => {

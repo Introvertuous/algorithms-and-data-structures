@@ -1,5 +1,3 @@
-("use strict");
-
 export class SinglyLinkedNode<T> {
   public data: T;
   public next: SinglyLinkedNode<T>;

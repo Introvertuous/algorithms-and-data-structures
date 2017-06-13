@@ -1,5 +1,3 @@
-("use strict");
-
 import { Stack } from "../../src/data_structures";
 
 test("stack", () => {

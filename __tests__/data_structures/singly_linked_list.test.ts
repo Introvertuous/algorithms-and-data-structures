@@ -1,5 +1,3 @@
-("use strict");
-
 import { SinglyLinkedList } from "../../src/data_structures";
 
 test("stack", () => {

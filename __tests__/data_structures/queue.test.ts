@@ -1,5 +1,3 @@
-("use strict");
-
 import { Queue } from "../../src/data_structures";
 
 test("queue", () => {

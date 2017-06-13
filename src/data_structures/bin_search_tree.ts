@@ -1,5 +1,3 @@
-("use strict");
-
 export class BinSearchTreeNode<T> {
   public data: T;
   public left: BinSearchTreeNode<T>;
