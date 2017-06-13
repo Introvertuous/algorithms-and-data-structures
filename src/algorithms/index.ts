@@ -1,3 +1,3 @@
-'use strict';
+("use strict");
 
-export { default as bubbleSort } from './bubble_sort';
+export { default as bubbleSort } from "./bubble_sort";
