@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Introvertuous/algorithms_and_data_structures.svg?branch=master)](https://travis-ci.org/Introvertuous/algorithms_and_data_structures)
+[![Build Status](https://travis-ci.org/Introvertuous/typescript-algods.svg?branch=master)](https://travis-ci.org/Introvertuous/typescript-algods)
 
 # Algorithms and Data Structures
 
