@@ -58,7 +58,7 @@ This project is an attempt to implement a collection of algorithms and data stru
   - [Wiki](https://en.wikipedia.org/wiki/Shellsort)
 - Tree Sort
   - [Wiki](https://en.wikipedia.org/wiki/Tree_sort)
-- Selection Sort
+- ~~Selection Sort~~
   - [Wiki](https://en.wikipedia.org/wiki/Selection_sort)
 - Insertion Sort
   - [Wiki](https://en.wikipedia.org/wiki/Insertion_sort)
