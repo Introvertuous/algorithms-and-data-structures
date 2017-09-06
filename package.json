@@ -1,32 +1,31 @@
 {
-    "name": "algorithms_and_data_structures",
-    "version": "0.0.1",
-    "description": "Algorithms and data structures in typescript.",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
-    },
-    "scripts": {
-        "build": "tsc",
-        "test": "jest dist",
-        "precommit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.ts": [
-            "prettier --parser=typescript --write",
-            "git add"
-        ]
-    },
-    "devDependencies": {
-        "@types/jest": "^19.2.3",
-        "@types/node": "^7.0.21",
-        "husky": "^0.13.4",
-        "jest-cli": "^20.0.0",
-        "lint-staged": "^3.6.1",
-        "prettier": "^1.4.4",
-        "typescript": "^2.3.2"
-    },
-    "jest": {
-        "verbose": true
-    }
+  "name": "algorithms_and_data_structures",
+  "version": "0.0.1",
+  "description": "Algorithms and data structures in typescript.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "dev-test": "jest dist --watch",
+    "test": "jest dist",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": ["prettier --parser=typescript --write", "git add"]
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.3",
+    "@types/node": "^7.0.21",
+    "husky": "^0.13.4",
+    "jest-cli": "^20.0.0",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4",
+    "typescript": "^2.3.2"
+  },
+  "jest": {
+    "verbose": true
+  }
 }
