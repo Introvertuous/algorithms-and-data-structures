@@ -10,19 +10,12 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "dev-test": "jest dist --watch",
-    "test": "jest dist",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": ["prettier --parser=typescript --write", "git add"]
+    "test": "jest dist"
   },
   "devDependencies": {
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
-    "husky": "^0.13.4",
     "jest-cli": "^20.0.0",
-    "lint-staged": "^3.6.1",
-    "prettier": "^1.4.4",
     "typescript": "^2.3.2"
   },
   "jest": {
