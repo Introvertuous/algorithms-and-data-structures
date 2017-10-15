@@ -16,6 +16,7 @@
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "jest-cli": "^20.0.0",
+    "prettier": "^1.7.4",
     "typescript": "^2.3.2"
   },
   "jest": {
