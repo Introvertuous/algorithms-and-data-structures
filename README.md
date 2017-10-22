@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Introvertuous/typescript-algods.svg?branch=master)](https://travis-ci.org/Introvertuous/typescript-algods)
 
-# Algorithms and Data Structures
+# Algorithms and Data Structures in Typescript
 
 This project is an attempt to implement a collection of algorithms and data structures in typescript, purely for educational purposes.
 
