@@ -17,6 +17,8 @@
     "@types/node": "^7.0.21",
     "jest-cli": "^20.0.0",
     "prettier": "^1.7.4",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.3.2"
   },
   "jest": {
