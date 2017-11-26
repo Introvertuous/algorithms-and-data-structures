@@ -10,7 +10,8 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "dev-test": "jest dist --watch",
-    "test": "jest dist"
+    "lint": "tslint src/*/**.ts",
+    "test": "yarn lint && jest dist"
   },
   "devDependencies": {
     "@types/jest": "^19.2.3",
