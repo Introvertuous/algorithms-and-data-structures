@@ -21,7 +21,7 @@ export default class SinglyLinkedList<T> {
   }
 
   public pushFirst(data: T) {
-    const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data, this.head);
+    const node = new SinglyLinkedNode(data, this.head);
     this.head = node;
     if (this.tail === null) {
       this.tail = node;
@@ -32,7 +32,7 @@ export default class SinglyLinkedList<T> {
     if (this.head === null) {
       return null;
     }
-    const data: T = this.head.data;
+    const data = this.head.data;
     if (this.head === this.tail) {
       this.head = null;
       this.tail = null;
@@ -71,23 +71,23 @@ export default class SinglyLinkedList<T> {
     }
   }
 
-  public get(i: number): T {
-    let curr: SinglyLinkedNode<T> = this.head;
-    while (curr != null && i > 0) {
+  public get(index: number): T {
+    let iterator = index;
+    let curr = this.head;
+    while (curr != null && iterator > 0) {
       curr = curr.next;
-      // tslint:disable-next-line:no-param-reassign
-      i = i - 1;
+      iterator = iterator - 1;
     }
-    if (i !== 0) {
+    if (iterator !== 0) {
       throw new Error("Index outside of list range");
     }
     return curr.data;
   }
 
   public middle(): T {
-    let curr: SinglyLinkedNode<T> = this.head;
-    let halfCurr: SinglyLinkedNode<T> = this.head;
-    let count: number = 1;
+    let curr = this.head;
+    let halfCurr = this.head;
+    let count = 1;
     while (curr !== null) {
       if (count % 2 === 0) {
         halfCurr = halfCurr.next;

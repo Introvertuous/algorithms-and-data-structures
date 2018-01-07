@@ -22,7 +22,7 @@ export default class BinSearchTree<T> {
   }
 
   public contains(data: T): Boolean {
-    let curr: BinSearchTreeNode<T> = this.root;
+    let curr = this.root;
     while (curr !== null) {
       if (data < curr.data) {
         curr = curr.left;
@@ -46,7 +46,7 @@ export default class BinSearchTree<T> {
   }
 
   public size(): number {
-    let length: number = 0;
+    let length = 0;
 
     this.traverse(() => {
       length = length + 1;
@@ -56,7 +56,7 @@ export default class BinSearchTree<T> {
   }
 
   public add(data: T) {
-    const node: BinSearchTreeNode<T> = new BinSearchTreeNode(data);
+    const node = new BinSearchTreeNode(data);
     if (this.root === null) {
       this.root = node;
     } else {
@@ -89,8 +89,8 @@ export default class BinSearchTree<T> {
         return -1;
       }
 
-      const right: number = getHeight(curr.right);
-      const left: number = getHeight(curr.left);
+      const right = getHeight(curr.right);
+      const left = getHeight(curr.left);
 
       return Math.max(left, right) + 1;
     })(this.root);
