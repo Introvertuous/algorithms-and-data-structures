@@ -10,7 +10,7 @@ export default function sort(arr: number[]) {
       }
     }
     if (mindex !== i) {
-      let temp = arr[mindex];
+      const temp = arr[mindex];
       arr[mindex] = arr[i];
       arr[i] = temp;
     }
