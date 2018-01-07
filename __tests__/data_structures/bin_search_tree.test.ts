@@ -1,6 +1,6 @@
 import { BinSearchTree } from "../../src/data_structures";
 
-const tree = new BinSearchTree();
+const tree = new BinSearchTree<number>();
 tree.add(4);
 tree.add(2);
 tree.add(76);

@@ -1,7 +1,7 @@
 import { Stack } from "../../src/data_structures";
 
 test("stack", () => {
-  const stack = new Stack();
+  const stack = new Stack<string>();
 
   stack.push("one");
   stack.push("two");

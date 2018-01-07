@@ -1,7 +1,7 @@
 import { Queue } from "../../src/data_structures";
 
 test("queue", () => {
-  const queue = new Queue();
+  const queue = new Queue<string>();
 
   queue.enqueue("one");
   queue.enqueue("two");
