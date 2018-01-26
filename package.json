@@ -1,10 +1,10 @@
 {
-  "name": "algorithms_and_data_structures",
+  "name": "typescript_algods",
   "version": "0.0.1",
   "description": "Algorithms and data structures in typescript.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Introvertuous/algorithms_and_data_structures"
+    "url": "https://github.com/Introvertuous/typescript_algods"
   },
   "scripts": {
     "dev": "tsc --watch",
