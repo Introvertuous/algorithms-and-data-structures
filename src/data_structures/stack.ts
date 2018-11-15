@@ -5,7 +5,7 @@ export default class Stack<T> {
     this.lis.push(val);
   }
 
-  public pop(): T {
+  public pop(): T | undefined {
     return this.lis.pop();
   }
 

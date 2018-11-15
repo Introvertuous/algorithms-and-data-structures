@@ -1,3 +1,5 @@
+import { isUndefined } from 'util';
+
 export default class Queue<T> {
   private lis: T[] = [];
 
@@ -5,11 +7,15 @@ export default class Queue<T> {
     this.lis.push(val);
   }
 
-  public dequeue(): T {
+  public dequeue(): T | null {
     if (this.lis.length === 0) {
       return null;
     }
-    return this.lis.shift();
+    const el = this.lis.shift();
+    if (isUndefined(el)) {
+      return null;
+    }
+    return el;
   }
 
   public peek(): T {

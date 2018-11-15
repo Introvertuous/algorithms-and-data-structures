@@ -1,12 +1,12 @@
 export class BinSearchTreeNode<T> {
   public data: T;
-  public left: BinSearchTreeNode<T>;
-  public right: BinSearchTreeNode<T>;
+  public left: BinSearchTreeNode<T> | null;
+  public right: BinSearchTreeNode<T> | null;
 
   public constructor(
     data: T,
-    left: BinSearchTreeNode<T> = null,
-    right: BinSearchTreeNode<T> = null
+    left: BinSearchTreeNode<T> | null = null,
+    right: BinSearchTreeNode<T> | null = null
   ) {
     this.data = data;
     this.left = left;
@@ -15,9 +15,9 @@ export class BinSearchTreeNode<T> {
 }
 
 export default class BinSearchTree<T> {
-  private root: BinSearchTreeNode<T>;
+  private root: BinSearchTreeNode<T> | null;
 
-  public constructor(root: BinSearchTreeNode<T> = null) {
+  public constructor(root: BinSearchTreeNode<T> | null = null) {
     this.root = root;
   }
 
@@ -35,10 +35,10 @@ export default class BinSearchTree<T> {
     return false;
   }
 
-  public toArray(): number[] {
-    const result: number[] = [];
+  public toArray(): T[] {
+    const result: T[] = [];
 
-    this.traverse(node => {
+    this.traverse((node: BinSearchTreeNode<T>) => {
       result.push(node.data);
     });
 
@@ -83,32 +83,31 @@ export default class BinSearchTree<T> {
     }
   }
 
-  public height(): number {
-    return (function getHeight(curr: BinSearchTreeNode<T>): number {
-      if (curr === null) {
-        return -1;
-      }
+  public getHeight(curr: BinSearchTreeNode<T> | null = this.root): number {
+    if (curr === null) {
+      return -1;
+    }
 
-      const right = getHeight(curr.right);
-      const left = getHeight(curr.left);
+    const right = this.getHeight(curr.right);
+    const left = this.getHeight(curr.left);
 
-      return Math.max(left, right) + 1;
-    })(this.root);
+    return Math.max(left, right) + 1;
   }
 
-  private traverse(callback: Function) {
-    (function inOrder(node: BinSearchTreeNode<T>) {
-      if (node !== null) {
-        if (node.left !== null) {
-          inOrder(node.left);
-        }
-
-        callback.call(this, node);
-
-        if (node.right !== null) {
-          inOrder(node.right);
-        }
+  private traverse(
+    callback: Function,
+    node: BinSearchTreeNode<T> | null = this.root
+  ) {
+    if (node !== null) {
+      if (node.left !== null) {
+        this.traverse(callback, node.left);
       }
-    })(this.root);
+
+      callback(node);
+
+      if (node.right !== null) {
+        this.traverse(callback, node.right);
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { BinSearchTree } from "../../src/data_structures";
+import { BinSearchTree } from '../../src/data_structures';
 
 const tree = new BinSearchTree<number>();
 tree.add(4);
@@ -8,19 +8,19 @@ tree.add(3);
 tree.add(54);
 tree.add(1);
 
-test("contains", () => {
+test('contains', () => {
   expect(tree.contains(54)).toBe(true);
   expect(tree.contains(1335)).toBe(false);
 });
 
-test("toArray", () => {
+test('toArray', () => {
   expect(tree.toArray()).toEqual([1, 2, 3, 4, 54, 76]);
 });
 
-test("size", () => {
+test('size', () => {
   expect(tree.size()).toBe(6);
 });
 
-test("height", () => {
-  expect(tree.height()).toEqual(2);
+test('height', () => {
+  expect(tree.getHeight()).toEqual(2);
 });

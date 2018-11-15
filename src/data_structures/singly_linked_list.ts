@@ -1,20 +1,20 @@
 export class SinglyLinkedNode<T> {
   public data: T;
-  public next: SinglyLinkedNode<T>;
+  public next: SinglyLinkedNode<T> | null;
 
-  public constructor(data: T, next: SinglyLinkedNode<T> = null) {
+  public constructor(data: T, next: SinglyLinkedNode<T> | null = null) {
     this.data = data;
     this.next = next;
   }
 }
 
 export default class SinglyLinkedList<T> {
-  private head: SinglyLinkedNode<T>;
-  private tail: SinglyLinkedNode<T>;
+  private head: SinglyLinkedNode<T> | null;
+  private tail: SinglyLinkedNode<T> | null;
 
   public constructor(
-    head: SinglyLinkedNode<T> = null,
-    tail: SinglyLinkedNode<T> = null
+    head: SinglyLinkedNode<T> | null = null,
+    tail: SinglyLinkedNode<T> | null = null
   ) {
     this.head = head;
     this.tail = tail;
@@ -28,7 +28,7 @@ export default class SinglyLinkedList<T> {
     }
   }
 
-  public popFirst(): T {
+  public popFirst(): T | null {
     if (this.head === null) {
       return null;
     }
@@ -46,7 +46,7 @@ export default class SinglyLinkedList<T> {
     const node: SinglyLinkedNode<T> = new SinglyLinkedNode(data);
     if (this.head === null) {
       this.head = node;
-    } else {
+    } else if (this.tail !== null) {
       this.tail.next = node;
     }
     this.tail = node;
@@ -57,8 +57,8 @@ export default class SinglyLinkedList<T> {
       return;
     }
     this.tail = this.head;
-    let prev: SinglyLinkedNode<T> = null;
-    let next: SinglyLinkedNode<T> = this.head.next;
+    let prev: SinglyLinkedNode<T> | null = null;
+    let next: SinglyLinkedNode<T> | null = this.head.next;
 
     while (true) {
       this.head.next = prev;
@@ -74,27 +74,35 @@ export default class SinglyLinkedList<T> {
   public get(index: number): T {
     let iterator = index;
     let curr = this.head;
+
     while (curr != null && iterator > 0) {
       curr = curr.next;
       iterator = iterator - 1;
     }
-    if (iterator !== 0) {
-      throw new Error("Index outside of list range");
+
+    if (iterator !== 0 || curr === null) {
+      throw new Error('Index outside of list range');
     }
+
     return curr.data;
   }
 
-  public middle(): T {
+  public middle(): T | null {
     let curr = this.head;
     let halfCurr = this.head;
     let count = 1;
-    while (curr !== null) {
+    while (curr !== null && halfCurr !== null) {
       if (count % 2 === 0) {
         halfCurr = halfCurr.next;
       }
       curr = curr.next;
       count = count + 1;
     }
+
+    if (halfCurr === null) {
+      return null;
+    }
+
     return halfCurr.data;
   }
 }
